@@ -352,10 +352,12 @@ export function TodoPage() {
         </div>
         <div className="nav-right">
           <button className="nav-action-btn" aria-label="Notifications"><Bell size={18} /></button>
+          <button className="nav-logout-btn" onClick={handleLogout}>Logout</button>
           <div className="nav-avatar" onClick={handleLogout} title="Click to logout">
             <span>{getUserName().charAt(0).toUpperCase()}</span>
           </div>
         </div>
+
       </nav>
 
       <div className="dashboard-body">

@@ -44,11 +44,20 @@ const STEPS = [
 export function LandingPage() {
   const navigate = useNavigate();
   const isLoggedIn = localStorage.getItem('auth_token') !== null;
+  const username = localStorage.getItem('auth_user_name') || 'Student';
+
 
   const handleCTA = () => {
     if (isLoggedIn) navigate('/dashboard');
     else navigate('/auth');
   };
+
+  const handleLogout = () => {
+    localStorage.removeItem('auth_token');
+    localStorage.removeItem('auth_user_name');
+    navigate('/');
+  };
+
 
   return (
     <div className="landing-root">
@@ -66,8 +75,15 @@ export function LandingPage() {
         </div>
         <div className="landing-nav-actions">
           {isLoggedIn ? (
-            <button className="cta-btn-sm" onClick={() => navigate('/dashboard')}>Go to Dashboard →</button>
+            <>
+              <button className="cta-btn-sm" onClick={() => navigate('/dashboard')}>Go to Dashboard →</button>
+              <button className="ghost-btn" onClick={handleLogout}>Logout</button>
+              <span className="landing-user-chip">{username}</span>
+
+
+            </>
           ) : (
+
             <>
               <button className="ghost-btn" onClick={() => navigate('/auth')}>Log In</button>
               <button className="cta-btn-sm" onClick={() => navigate('/auth')}>Sign Up Free</button>

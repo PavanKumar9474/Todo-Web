@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from rest_framework.test import APIClient
 from rest_framework.authtoken.models import Token
 from rest_framework import status
-from .models import Task
+from models import Task
 
 
 class AuthTests(TestCase):

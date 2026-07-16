@@ -9,6 +9,15 @@ from .models import Task
 from .serializers import TaskSerializer
 
 
+class MeView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        return Response({
+            'user_name': request.user.first_name or request.user.username,
+        })
+
+
 class TaskViewSet(viewsets.ModelViewSet):
     """ViewSet providing full CRUD for authenticated user's Tasks."""
     serializer_class = TaskSerializer

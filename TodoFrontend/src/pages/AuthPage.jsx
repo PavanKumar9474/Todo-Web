@@ -37,10 +37,13 @@ export function AuthPage() {
         if (!formData.name) { setError('Name is required'); return; }
         if (formData.password !== formData.confirmPassword) { setError('Passwords do not match'); return; }
 
-        const data = await registerUser(formData.name, formData.email, formData.password);
-        localStorage.setItem('auth_token', data.token);
-        localStorage.setItem('auth_user_name', data.user_name);
-        navigate('/dashboard');
+        await registerUser(formData.name, formData.email, formData.password);
+        // After register redirect user to login (as requested)
+        setIsLogin(true);
+        setSuccessMsg('Account created. Please log in.');
+        setFormData({ name: '', email: '', password: '', confirmPassword: '' });
+        navigate('/auth');
+
       } else {
         // --- LOGIN ---
         const data = await loginUser(formData.email, formData.password);

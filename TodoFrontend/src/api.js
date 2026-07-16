@@ -91,3 +91,19 @@ export async function registerUser(name, email, password) {
   }
   return res.json();
 }
+
+/**
+ * Validate current token and return user info.
+ */
+export async function fetchMe() {
+  const res = await fetch(`${API_BASE}me/`, {
+    headers: getHeaders(),
+  });
+  if (!res.ok) {
+    const text = await res.text().catch(() => '');
+    throw new Error(text || 'Unauthorized');
+  }
+  return res.json();
+}
+
+

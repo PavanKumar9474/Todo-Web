@@ -2,6 +2,9 @@ import { useState } from 'react';
 import { Plus, ChevronDown } from 'lucide-react';
 
 export function TodoForm({ onAdd, selectedDate, categories = [], compact = false, expanded = false }) {
+  // Ensure clicks on the + (submit) button work even if the user previously
+  // typed something and the UI rerenders.
+  // submit handler prevents default and calls onAdd().
   const [text, setText] = useState('');
   const [dueDate, setDueDate] = useState(selectedDate || '');
   const [category, setCategory] = useState('personal');

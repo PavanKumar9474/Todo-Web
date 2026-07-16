@@ -77,12 +77,35 @@ WSGI_APPLICATION = 'todobackend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# Database
+# Default to sqlite for local/dev to avoid requiring Postgres credentials.
+# You can override all values via environment variables.
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# Optional Postgres override
+import os  # noqa: E402
+
+postgres_name = os.environ.get('POSTGRES_DB')
+postgres_user = os.environ.get('POSTGRES_USER')
+postgres_password = os.environ.get('POSTGRES_PASSWORD')
+postgres_host = os.environ.get('POSTGRES_HOST')
+postgres_port = os.environ.get('POSTGRES_PORT')
+
+if all([postgres_name, postgres_user, postgres_password, postgres_host, postgres_port]):
+    DATABASES['default'] = {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': postgres_name,
+        'USER': postgres_user,
+        'PASSWORD': postgres_password,
+        'HOST': postgres_host,
+        'PORT': postgres_port,
+    }
+
 
 
 # Password validation
