@@ -188,7 +188,7 @@ npm run dev
 ## 🏠 Dashboard
 
 <p align="center">
-<img src="TodoFrontend/src/images/dashboard.png" width="100%">
+<img src="src/images/dashboard.png" width="100%">
 </p>
 
 ---
@@ -196,7 +196,7 @@ npm run dev
 ## ➕ Add New Task
 
 <p align="center">
-<img src="TodoFrontend/src/images/addtask.png" width="100%">
+<img src="src/images/addtask.png" width="100%">
 </p>
 
 ---
@@ -204,7 +204,7 @@ npm run dev
 ## ✅ Completed Task
 
 <p align="center">
-<img src="TodoFrontend/src/images/completed.png" width="100%">
+<img src="src/images/completed.png" width="100%">
 </p>
 
 ---
