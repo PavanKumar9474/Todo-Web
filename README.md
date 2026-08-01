@@ -182,31 +182,23 @@ npm run dev
 ```
 
 ---
-
 # 📸 Screenshots
 
 ## 🏠 Dashboard
 
-<p align="center">
-<img src="src/images/dashboard.png" width="100%">
-</p>
+![Dashboard](images/dashboard.png)
 
 ---
 
 ## ➕ Add New Task
 
-<p align="center">
-<img src="src/images/addtask.png" width="100%">
-</p>
+![Add Task](images/addtask.png)
 
 ---
 
 ## ✅ Completed Task
 
-<p align="center">
-<img src="src/images/completed.png" width="100%">
-</p>
-
+![Completed](images/completed.png)
 ---
 
 # 🎯 Application Workflow
