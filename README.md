@@ -2,14 +2,19 @@
 
 # 📝 Todo-Web
 
-### A Simple & Responsive Task Management Web Application
+### A Modern Full Stack Task Management Web Application
 
-![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+<p align="center">
+  <img src="TodoFrontend/src/images/dashboard.png" alt="Todo Dashboard" width="100%">
+</p>
+
+<br>
+
+![React](https://img.shields.io/badge/React-18-blue?style=for-the-badge&logo=react)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge&logo=fastapi)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-336791?style=for-the-badge&logo=postgresql)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?style=for-the-badge&logo=javascript)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-![GitHub Repo stars](https://img.shields.io/github/stars/PavanKumar9474/Todo-Web?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/PavanKumar9474/Todo-Web?style=for-the-badge)
 
 </div>
 
@@ -17,58 +22,120 @@
 
 # 📖 Overview
 
-**Todo-Web** is a lightweight and user-friendly web application that helps users organize their daily tasks efficiently. Users can add, edit, complete, and delete tasks through a clean and responsive interface.
+Todo-Web is a modern full-stack task management application that helps users organize daily work efficiently.
 
-This project was built to practice JavaScript DOM manipulation, event handling, and responsive web design.
+Users can:
+
+- Create Tasks
+- Edit Tasks
+- Delete Tasks
+- Mark Tasks as Completed
+- Categorize Tasks
+- Set Priority Levels
+- Schedule Due Dates
+- View Dashboard Analytics
+
+The application provides a clean UI with a responsive dashboard, calendar, and task statistics.
 
 ---
 
 # ✨ Features
 
-- ✅ Add New Tasks
-- ✏️ Edit Existing Tasks
-- 🗑️ Delete Tasks
-- ✔️ Mark Tasks as Completed
-- 🔄 Real-Time Task Updates
-- 📱 Responsive Design
-- ⚡ Fast and Lightweight
-- 🎨 Clean User Interface
-- 💻 Works on All Modern Browsers
+### Dashboard
+
+- 📊 Dashboard Overview
+- 📅 Calendar
+- 📈 Task Analytics
+- 📌 Today's Tasks
+- ⭐ Important Tasks
+
+### Task Management
+
+- ✅ Add New Task
+- ✏️ Edit Task
+- 🗑 Delete Task
+- ✔ Complete Task
+- 🔄 Update Task Status
+
+### Categories
+
+- Personal
+- Work
+- Study
+- Health
+- Shopping
+
+### Priority
+
+- 🔴 High
+- 🟡 Medium
+- 🟢 Low
+
+### Other Features
+
+- Responsive UI
+- Search Tasks
+- Dark Theme
+- Fast Performance
+- User Friendly Interface
 
 ---
 
 # 🛠 Tech Stack
 
-| Technology | Purpose |
-|------------|---------|
-| HTML5 | Structure |
-| CSS3 | Styling |
-| JavaScript (ES6) | Functionality |
-| Git | Version Control |
-| GitHub | Repository Hosting |
+## Frontend
+
+- React.js
+- JavaScript
+- HTML5
+- CSS3
+- Axios
+
+## Backend
+
+- FastAPI
+- Python
+
+## Database
+
+- PostgreSQL
+
+## Tools
+
+- VS Code
+- Git
+- GitHub
 
 ---
 
 # 📂 Project Structure
 
-```
-Todo-Web/
+```text
+TODOAPP
 │
-├── index.html
-├── style.css
-├── script.js
-├── assets/
-│   ├── images/
-│   └── icons/
+├── TodoBackend
+│
+├── TodoFrontend
+│   ├── src
+│   │   ├── components
+│   │   ├── pages
+│   │   ├── assets
+│   │   ├── images
+│   │   │   ├── dashboard.png
+│   │   │   ├── addtask.png
+│   │   │   └── completed.png
+│   │   └── App.jsx
+│   │
+│   └── package.json
 │
 └── README.md
 ```
 
 ---
 
-# 🚀 Getting Started
+# 🚀 Installation
 
-## Clone the Repository
+## Clone Repository
 
 ```bash
 git clone https://github.com/PavanKumar9474/Todo-Web.git
@@ -76,154 +143,214 @@ git clone https://github.com/PavanKumar9474/Todo-Web.git
 
 ---
 
-## Navigate to the Project
+## Backend
 
 ```bash
-cd Todo-Web
+cd TodoBackend
+```
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+Run
+
+```bash
+uvicorn main:app --reload
 ```
 
 ---
 
-## Run the Project
+## Frontend
 
-Simply open:
-
-```
-index.html
+```bash
+cd TodoFrontend
 ```
 
-or use **VS Code Live Server**.
+Install Packages
+
+```bash
+npm install
+```
+
+Run
+
+```bash
+npm run dev
+```
 
 ---
 
 # 📸 Screenshots
 
-## 🏠 Home Page
+## 🏠 Dashboard
 
-```
-(Add Screenshot Here)
-```
+<p align="center">
+<img src="TodoFrontend/src/images/dashboard.png" width="100%">
+</p>
 
 ---
 
-## ➕ Adding a Task
+## ➕ Add New Task
 
-```
-(Add Screenshot Here)
-```
+<p align="center">
+<img src="TodoFrontend/src/images/addtask.png" width="100%">
+</p>
 
 ---
 
 ## ✅ Completed Task
 
+<p align="center">
+<img src="TodoFrontend/src/images/completed.png" width="100%">
+</p>
+
+---
+
+# 🎯 Application Workflow
+
+```text
+User Login
+
+      ↓
+
+Dashboard
+
+      ↓
+
+Create New Task
+
+      ↓
+
+Select Category
+
+      ↓
+
+Choose Priority
+
+      ↓
+
+Set Due Date
+
+      ↓
+
+Save Task
+
+      ↓
+
+Edit / Complete / Delete
 ```
-(Add Screenshot Here)
-```
 
 ---
 
-# 🎯 How to Use
+# 🌟 Features in Detail
 
-1. Open the application.
-2. Enter a task in the input field.
-3. Click **Add**.
-4. View the task in the list.
-5. Mark tasks as completed.
-6. Edit tasks if required.
-7. Delete completed or unwanted tasks.
-
----
-
-# 🌟 Key Features
-
-- User-friendly interface
-- Instant task updates
-- Easy task management
-- Responsive layout
-- Beginner-friendly codebase
-
----
-
-# 💡 Future Improvements
-
-- 🔐 User Authentication
-- ☁️ Cloud Database Integration
-- 📅 Due Date Support
-- 🔔 Reminder Notifications
-- 🌙 Dark Mode
-- 📂 Task Categories
-- 🔍 Search Tasks
-- 🏷️ Task Priority
-- 📊 Progress Tracker
-- 📱 Mobile App Version
+- Task Dashboard
+- Calendar View
+- Priority Labels
+- Category Management
+- Search Functionality
+- Task Statistics
+- Responsive Layout
+- Beautiful UI
+- Fast Performance
 
 ---
 
 # 📱 Responsive Design
 
-The application is fully responsive and works on:
+Supports
 
-- 💻 Desktop
-- 💻 Laptop
-- 📱 Mobile
-- 📱 Tablet
+- Desktop
+- Laptop
+- Tablet
+- Mobile
 
 ---
 
-# 📊 Learning Outcomes
+# 📈 Dashboard Statistics
+
+Displays
+
+- Today's Tasks
+- Upcoming Tasks
+- Completed Tasks
+- Important Tasks
+
+---
+
+# 💡 Future Improvements
+
+- User Authentication
+- Email Notifications
+- Dark / Light Theme
+- Drag & Drop Tasks
+- Team Collaboration
+- Task Sharing
+- Labels & Tags
+- File Attachments
+- Reminder Notifications
+- Mobile Application
+
+---
+
+# 📚 Learning Outcomes
 
 This project helped in understanding:
 
-- HTML Structure
-- CSS Styling
+- React Components
+- React Hooks
+- State Management
+- API Integration
+- FastAPI
+- CRUD Operations
+- PostgreSQL
 - Responsive Design
-- JavaScript DOM Manipulation
-- Event Handling
-- Arrays & Objects
-- Local Development Workflow
-- Git & GitHub
+- Modern UI Design
 
 ---
 
-# 📝 Future Roadmap
+# 📝 Roadmap
 
-- [ ] Local Storage Support
+- [ ] Authentication
+- [ ] User Profiles
+- [ ] Email Verification
+- [ ] Notifications
 - [ ] Dark Theme
-- [ ] Drag & Drop Tasks
-- [ ] Task Search
-- [ ] Task Filters
-- [ ] Priority Levels
-- [ ] Calendar View
-- [ ] Backend Integration
-- [ ] User Accounts
-- [ ] Cloud Synchronization
+- [ ] Cloud Deployment
+- [ ] Team Workspace
+- [ ] Mobile App
+- [ ] AI Task Suggestions
 
 ---
 
 # 🤝 Contributing
 
-Contributions are welcome!
+Contributions are welcome.
 
-1. Fork this repository
-2. Create a feature branch
+1. Fork Repository
+
+2. Create Branch
 
 ```bash
 git checkout -b feature-name
 ```
 
-3. Commit your changes
+3. Commit
 
 ```bash
 git commit -m "Added New Feature"
 ```
 
-4. Push to GitHub
+4. Push
 
 ```bash
 git push origin feature-name
 ```
 
-5. Open a Pull Request
+5. Open Pull Request
 
 ---
 
@@ -239,57 +366,53 @@ git push origin feature-name
 - FastAPI
 - React
 - JavaScript
-- HTML5
-- CSS3
 - PostgreSQL
 - Docker
-
-GitHub:
-
-https://github.com/PavanKumar9474
+- HTML
+- CSS
 
 ---
 
-# 📧 Contact
+## 📬 Contact
 
-GitHub
+**GitHub**
 
 https://github.com/PavanKumar9474
 
-LinkedIn
+**LinkedIn**
 
-(Add Your LinkedIn Profile)
+https://www.linkedin.com/in/a-pavan-kumar-reddy-b2a431300/
 
-Email
+**Email**
 
-(Add Your Email Address)
+pavankumar947494@gmail.com
 
 ---
 
 # 📄 License
 
-This project is licensed under the **MIT License**.
+This project is licensed under the MIT License.
 
 ---
 
 # ⭐ Support
 
-If you found this project helpful:
+If you like this project,
 
-⭐ Star this repository
+⭐ Star this Repository
 
-🍴 Fork this repository
+🍴 Fork this Repository
 
-📢 Share it with your friends
+📢 Share it with others
 
 ---
 
 <div align="center">
 
-## 🚀 Happy Coding!
+## ❤️ Thank You
 
 Made with ❤️ by **Pavan Kumar**
 
-If you like this project, don't forget to ⭐ the repository.
+**If you like this project, don't forget to ⭐ Star the repository!**
 
 </div>
