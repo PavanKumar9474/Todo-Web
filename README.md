@@ -181,25 +181,6 @@ Run
 npm run dev
 ```
 
----
-# 📸 Screenshots
-
-## 🏠 Dashboard
-
-![Dashboard](images/dashboard.png)
-
----
-
-## ➕ Add New Task
-
-![Add Task](images/addtask.png)
-
----
-
-## ✅ Completed Task
-
-![Completed](images/completed.png)
----
 
 # 🎯 Application Workflow
 
